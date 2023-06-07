@@ -20,7 +20,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     <div className="prompt_Card">
       <div className="flex justify-between items-start gap-5">
         <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
-          <Image 
+          <Image
             src={post.creator?.image}
             alt='user_image'
             width={40}
@@ -37,8 +37,8 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
           </div>
         </div>
         <div className="copy_btn" onClick={handleCopy}>
-          <Image 
-            src={copied === post.prompt 
+          <Image
+            src={copied === post.prompt
             ? '/assets/icons/tick.svg'
             : 'assets/icons/copy.svg'
             }
