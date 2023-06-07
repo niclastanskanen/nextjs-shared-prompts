@@ -27,7 +27,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   }
 
   return (
-    <div className="prompt_Card">
+    <div className="prompt_card">
       <div className="flex justify-between items-start w-full gap-5">
         <div
           className="flex-1 flex justify-start items-center gap-3 cursor-pointer flex-wrap"
@@ -41,7 +41,6 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
             className='rounded-full object-contain'
           />
           <div className="flex flex-col">
-          {/* <div className="flex-1 block"> */}
             <h3 className="font-satoshi font-semibold text-gray-900">
               {post.creator?.username}
             </h3>
