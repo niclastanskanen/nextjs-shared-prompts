@@ -21,7 +21,6 @@ const PromptCardList = ({ data, handleTagClick }) => {
 const Feed = () => {
   const [allPosts, setAllPosts] = useState([]);
 
-  // Search states
   const [searchText, setSearchText] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchedResults, setSearchedResults] = useState([]);
@@ -37,8 +36,8 @@ const Feed = () => {
     fetchPosts();
   }, []);
 
-  const filterPrompts = (searchtext) => {
-    const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
+  const filterPrompts = (searchText) => {
+    const regex = new RegExp(searchText, "i"); // 'i' flag for case-insensitive search
     return allPosts.filter(
       (item) =>
         regex.test(item.creator.username) ||
@@ -80,7 +79,6 @@ const Feed = () => {
         />
       </form>
 
-      {/* All Prompts */}
       {searchText ? (
         <PromptCardList
           data={searchedResults}
